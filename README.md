@@ -17,17 +17,17 @@ Una tabla periódica interactiva construida en HTML, CSS y JavaScript, ideal par
 ![Modal activo](./screenshots/modal-activo.png)
 
 ## 🛠️ Tecnologías usadas
-HTML5 – Estructura del contenido
+1. HTML5 – Estructura del contenido
 
-CSS3 – Estilos visuales responsivos
+2. CSS3 – Estilos visuales responsivos
 
-JavaScript – Interactividad (filtros y modal)
+3. JavaScript – Interactividad (filtros y modal)
 
-Google Fonts – Tipografía Montserrat
+4. Google Fonts – Tipografía Montserrat
 
-Wikipedia – Información externa de los elementos
+5. Wikipedia – Información externa de los elementos
 
-##🙌 Créditos
+## 🙌 Créditos
 Este proyecto fue construido como recurso educativo bajo el espíritu de Free Code For All.
 
 Inspirado por la necesidad de tener materiales didácticos accesibles, interactivos y visualmente amigables para todos los niveles.
