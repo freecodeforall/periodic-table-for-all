@@ -44,11 +44,11 @@ Inspirado por la necesidad de tener materiales didácticos accesibles, interacti
 💡 Código limpio y fácil de mantener
 
 ## 🧠 ¿Por qué usar este proyecto?
-Ideal como herramienta educativa
+1. Ideal como herramienta educativa
 
-Perfecto para aprender HTML + CSS + JS trabajando con data
+2. Perfecto para aprender HTML + CSS + JS trabajando con data
 
-Puede integrarse fácilmente en sistemas de enseñanza en línea o apps web
+3. Puede integrarse fácilmente en sistemas de enseñanza en línea o apps web
 
 ---
 
