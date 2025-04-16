@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+        
+body {
+font-family: Arial, sans-serif;
+text-align: center;
+margin: 0;
+padding: 0;
+background-color: rgb(232, 231, 231);
+}
+
+.tabla {
+    display: grid;
+    grid-template-columns: repeat(18, minmax(50px, 1fr));
+    gap: 5px;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 90vw; /* Limita el ancho máximo al 90% del viewport */
+}
+
+/* Estilos de los elementos */
+.elemento {
+    width: 5vw; /* Usa porcentaje del viewport para ajuste dinámico */
+    height: 5vw;
+    max-width: 100px; /* Tamaño máximo desde 1920px */
+    max-height: 100px;
+    min-width: 50px;
+    min-height: 50px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 1vw; /* Ajuste de texto dinámico */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.elemento:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+}
+
+/* Estilos de los textos dentro de los elementos */
+.numero, .masa {
+    position: absolute;
+    font-size: 0.8vw;
+}
+
+.numero {
+    top: 5px;
+    left: 5px;
+}
+
+.masa {
+    top: 5px;
+    right: 5px;
+}
+
+.simbolo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2vw;
+    font-weight: 800;
+}
+
+.nombre {
+    font-size: 1vw;
+    position: absolute;
+    bottom: 5px;
+}
+
+/* Botones filtrado */
+
+.desactivado {
+    filter: grayscale(100%) opacity(50%);
+}
+
+.botones {
+    margin: 20px;
+}
+.botones button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    opacity: 0.4;
+}
+.botones button.activo {
+    opacity: 1;
+}
+.botones button.metales-alcalinos { background-color: #ff6666; }
+.botones button.metales-alcalinoterreos { background-color: #ffcc66; }
+.botones button.metales-transicionales { background-color: #ccccff; }
+.botones button.metaloides { background-color: #99cc99; }
+.botones button.no-metales { background-color: #66ccff; }
+.botones button.gases-nobles { background-color: #ff99cc; }
+.botones button.lantanidos { background-color: #ff9966; }
+.botones button.actinidos { background-color: #ff9966; }
+.botones button.propiedad-desconocida { background-color:  #bdbdbd; }
+.botones button.todos { background-color: #ffffff; }
+.botones button:hover {
+    opacity: 0.8;
+}
+
+/*  MEDIA QUERIES PARA DIFERENTES PANTALLAS */
+
+/* Pantallas de 1300px x 700px */
+@media (max-width: 1300px) {
+    .tabla {
+        max-width: 95vw;
+        grid-template-columns: repeat(18, minmax(40px, 1fr));
+    }
+    .elemento {
+        width: 4.5vw;
+        height: 4.5vw;
+        font-size: 1vw;
+    }
+    .simbolo {
+        font-size: 1.8vw;
+    }
+    .nombre, .numero, .masa {
+        font-size: 0.7vw;
+    }
+}
+
+/* Pantallas de 1900px x 960px en adelante (hasta 4K) */
+@media (min-width: 1900px) {
+    .tabla {
+        max-width: 70vw;
+    }
+    .elemento {
+        width: 70px;  /* Fijar tamaño máximo */
+        height: 70px;
+        font-size: 14px;
+    }
+    .simbolo {
+        font-size: 26px;
+    }
+    .nombre, .numero, .masa {
+        font-size: 11px;
+    }
+    
+    .botones button {
+        margin: 10px;
+        padding: 7px;
+        font-size: 14px;
+    }
+}
+
+/* Pantallas de 2500px en adelante (incluye 4K) */
+@media (min-width: 2500px) {
+    .tabla {
+        max-width: 75vw;
+    }
+    .elemento {
+        width: 100px;  /* Mantiene tamaño */
+        height: 100px;
+    }
+    .simbolo {
+        font-size: 30px;
+    }
+    .nombre, .numero, .masa {
+        font-size: 12px;
+    }
+}
+
+
+
+.metales-alcalinos { background-color: #ff6666; }
+.metales-alcalinoterreos { background-color: #ffcc66; }
+.metales-transicionales { background-color: #ccccff; }
+.metaloides { background-color: #99cc99; }
+.no-metales { background-color: #66ccff; }
+.gases-nobles { background-color: #ff99cc; }
+.lantanidos, .actinidos { background-color: #ff9966; }
+.propiedad-desconocida { background-color: #bdbdbd; }
+.empty {
+    visibility: hidden;
+}
+/* Estilos para el modal */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    width: 80%;
+    height: 80%;
+    position: relative;
+}
+.modal-content iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
