@@ -10,11 +10,11 @@ Una tabla periódica interactiva construida en HTML, CSS y JavaScript, ideal par
 
 ### Filtro aplicado (solo No Metales)
 
-![Captura - Filtro aplicado](./screenshots/tabla-no-metales.png)
+![Image](https://github.com/user-attachments/assets/6f197243-5c76-471f-b329-f9c3f54be15d)
 
 ### Modal de Wikipedia al hacer clic
 
-![Modal activo](./screenshots/modal-activo.png)
+![Image](https://github.com/user-attachments/assets/988de0ee-9d32-4c76-90dd-e5890c20194f)
 
 ## 🛠️ Tecnologías usadas
 1. HTML5 – Estructura del contenido
