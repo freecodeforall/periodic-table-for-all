@@ -6,7 +6,7 @@ Una tabla periódica interactiva construida en HTML, CSS y JavaScript, ideal par
 
 ### Vista completa (pantalla grande)
 
-![Captura - Tabla completa](./screenshots/tabla-pantalla-completa.png)
+![Image](https://github.com/user-attachments/assets/4f7a92ca-294e-4d3f-980c-71140b2fbf4f)
 
 ### Filtro aplicado (solo No Metales)
 
